@@ -31,7 +31,7 @@ Anyone is more than welcome to submit a pull requests! Just follow these guideli
 - Make any features that could be classed as cheating, able to be disabled in the settings
 - State all changes clearly in changes and pull requests
 - Test the changes thoroughly first
-- 
+
 ##Contact
 Slack: https://error22.herokuapp.com/
 Email: chandler2newman.co.uk
