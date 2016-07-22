@@ -33,5 +33,6 @@ Anyone is more than welcome to submit a pull requests! Just follow these guideli
 - Test the changes thoroughly first
 
 ##Contact
-Slack: https://error22.herokuapp.com/
-Email: chandler2newman.co.uk
+Slack: https://error22.herokuapp.com/ (#pokemongo-desktop channel)
+
+Email: chandler2newman@hotmail.co.uk
