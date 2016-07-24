@@ -21,6 +21,12 @@ namespace PGODesktop.Network
 		private const string CLIENT_SECRET = "w8ScCUXJQc6kXKw8FiOhd8Fixzht18Dq3PEVkUCP5ZPxtgyWsbTvWHFLm2wNY0JR";
 		private string token;
 
+		public DesktopNetworkInterface(){
+			ServicePointManager.ServerCertificateValidationCallback = delegate {
+				return true;
+			};
+		}
+
 		public bool loginPTC(string username, string password){
 			IRestClient loginClient = new RestClient (LOGIN_URL);
 			loginClient.CookieContainer = new CookieContainer ();

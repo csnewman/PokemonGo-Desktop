@@ -10,7 +10,7 @@ Using unity allows the project to be exported to numerous devices, however some 
 - Web (Using WebGL)
 
 ##Features
-- [ ] PTC Login
+- [x] PTC Login
 - [ ] Google Login
 - [ ] Google maps
 - [ ] Nearby Pokemon
