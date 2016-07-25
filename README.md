@@ -1,7 +1,6 @@
 # PokemonGo-Desktop
 An unofficial desktop version of the mobile game using unity. Designed to be close to the original game however slightly modified to allow better desktop support, such as WASD movement.
-
-Slow Progress: This project is making slow progress as I have code I am wanting to test however the pokemon servers are frequently offline. Feel free to join my slack (https://error22.herokuapp.com/) to contact me!
+This is not designed to be a cheating tool! It is meant to allow user who are unable to play the mobile version of the game, for whatever reason, to not be left out. 
 
 ##Target platforms
 Using unity allows the project to be exported to numerous devices, however some devices require extra consideration when designing support them, so a select few platforms are being mainly focused upon.
@@ -12,16 +11,18 @@ Using unity allows the project to be exported to numerous devices, however some 
 ##Features
 - [x] PTC Login
 - [ ] Google Login
-- [ ] Google maps
+- [ ] Registration
+- [ ] Map (Using Google Maps for images)
 - [ ] Nearby Pokemon
-- [ ] WASD support
+- [ ] WASD Support
 - [ ] Map (with teleport and viewing past local area, can be disabled if you think it's cheating)
-- [ ] Pokemon catching
-- [ ] All Pokemon's 
+- [ ] All Pokemons
+- [ ] Pokemon Catching 
 - [ ] Pokestops
 - [ ] Gyms
-
-Some aspects of this program may not be optimal, such as 2d graphics however this is due to the limited supply of assets freely available. Making the program 3D is of course on our wish list, however isn't possible without modellers. 
+- [ ] Teams
+- [ ] Journal
+- [ ] Medals
 
 ##Developers 
 Anyone is more than welcome to submit a pull requests! Just follow these guidelines
@@ -36,3 +37,8 @@ Anyone is more than welcome to submit a pull requests! Just follow these guideli
 Slack: https://error22.herokuapp.com/ (#pokemongo-desktop channel)
 
 Email: chandler2newman@hotmail.co.uk
+
+##Special Thanks
+- https://github.com/eamonwoortman/RestSharp.Unity (Rest networking library ported to unity)
+- https://github.com/AeonLucid/POGOProtos (All of the networking messages)
+- https://github.com/bitcraftCoLtd/protobuf3-for-unity (Allows those messages to be used in unity)
