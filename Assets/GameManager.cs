@@ -16,6 +16,9 @@ namespace PGODesktop
 		public InputField UsernameField;
 		public InputField PasswordField;
 		public Button LoginButton;
+		public GameObject LoginMessagePanel;
+		public Text LoginMessage;
+		public GameObject LoggingInPanel;
 		private INetworkInterface network;
 		private bool _loggedIn;
 
@@ -26,6 +29,7 @@ namespace PGODesktop
 			network = new DesktopNetworkInterface();
 
 			LoginPanel.SetActive (true);
+			LoginMessagePanel.SetActive (false);
 			LoginButton.onClick.AddListener(delegate {
 				CoroutineManager.Start ("login", BeginLogin ());
 			});
@@ -35,6 +39,9 @@ namespace PGODesktop
 		{
 			yield return new EnterForeground ();
 			LoginPanel.SetActive (false);
+			LoginMessagePanel.SetActive (false);
+			LoggingInPanel.SetActive (true);
+
 			//TODO: Show logging in dialog
 
 			yield return new EnterBackground ();
@@ -46,14 +53,18 @@ namespace PGODesktop
 			} else {
 				Debug.Log ("Login failed!");
 				yield return new EnterForeground ();
-				//TODO: Show log in failed dialog
+				LoggingInPanel.SetActive (false);
 				LoginPanel.SetActive (true);
+				LoginMessagePanel.SetActive (true);
+				LoginMessage.text = "Login Failed!";
+				LoginMessagePanel.GetComponent<AutoDestroy> ().ResetTime ();
 			}
 		}
 
 		private void Update ()
 		{
-	
+
+
 		}
 	}
 
