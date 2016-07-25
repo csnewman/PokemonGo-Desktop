@@ -30,7 +30,7 @@ Teleporting is left enabled incase you end up somewhere crazy via a bug, like th
 
 As some people have pointed out, this project is still cheating as it is allowing people to be able to do stuff that can't otherwise. The intention is to allow more people to play the game. I won't be adding any "boting" features such as auto catchers and auto pokemon returners. There are also a dozen GPS spoofing tools already out there that work with your phone and are easier to use, people who want to just cheat in this way are more likely to use one of those tools anyway. This program is not allowing something that already isn't possible.
 
-##*WhWhyt use a android emulator/etc?
+##Why not uss a android emulator/etc?
 
 You probably should use one of those instead of this project if you want the latest features and want a non-buggy experience. This project is mainly for fun.
 
