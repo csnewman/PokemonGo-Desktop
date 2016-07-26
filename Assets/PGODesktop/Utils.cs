@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Google.Protobuf;
+using POGOProtos.Networking.Requests;
+using POGOProtos.Networking.Requests.Messages;
 using RestSharp;
 
 namespace PGODesktop
@@ -53,8 +56,27 @@ namespace PGODesktop
 			return data;
 		}
 
+        public static ulong NextULong(this Random random)
+        {
+            byte[] bytes = new byte[8];
+            random.NextBytes(bytes);
+            return BitConverter.ToUInt64(bytes, 0);
+        }
 
+        public static ulong FloatToULong(double value)
+        {
+            return BitConverter.ToUInt64(BitConverter.GetBytes(value), 0);
+        }
 
-	}
+        public static Request CreateRequest(RequestType type, IMessage message)
+	    {
+	        return new Request()
+	        {
+	            RequestType = type,
+                RequestMessage = message.ToByteString()
+	        };
+	    }
+
+    }
 }
 

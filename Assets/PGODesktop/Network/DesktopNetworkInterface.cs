@@ -6,7 +6,11 @@ using UnityEngine;
 using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
-
+using Google.Protobuf;
+using POGOProtos.Networking.Envelopes;
+using POGOProtos.Networking.Requests;
+using POGOProtos.Networking.Requests.Messages;
+using Random = System.Random;
 
 namespace PGODesktop.Network
 {
@@ -19,9 +23,12 @@ namespace PGODesktop.Network
 		private const string ClientId = "mobile-app_pokemon-go";
 		private const string RedirectUri = "https://www.nianticlabs.com/pokemongo/error";
 		private const string ClientSecret = "w8ScCUXJQc6kXKw8FiOhd8Fixzht18Dq3PEVkUCP5ZPxtgyWsbTvWHFLm2wNY0JR";
-		private string _token;
+	    private readonly Random _random;
+	    private RequestEnvelope.Types.AuthInfo _authInfo;
 
-		public DesktopNetworkInterface(){
+        public DesktopNetworkInterface()
+		{
+		    _random = new Random();
 			ServicePointManager.ServerCertificateValidationCallback = delegate {
 				return true;
 			};
@@ -75,15 +82,57 @@ namespace PGODesktop.Network
 			renew.AddParameter ("code", query["ticket"]);
 
 			IRestResponse renewResponse = loginClient.Execute (renew);
-			_token = renewResponse.Content.ParseQueryString (true) ["access_token"];
-			Debug.Log ("Token: "+_token);
-			return PtcLoginResult.Success;
+			string token = renewResponse.Content.ParseQueryString (true) ["access_token"];
+			Debug.Log ("Token: "+token);
+
+            _authInfo = new RequestEnvelope.Types.AuthInfo()
+            {
+                Provider = "ptc",
+                Token = new RequestEnvelope.Types.AuthInfo.Types.JWT()
+                {
+                    Contents = token,
+                    Unknown2 = 59
+                }
+            };
+            
+            return PtcLoginResult.Success;
 		}
 
 		public bool LoginGoogle(string email, string password){
 			Debug.LogError ("Google login is not supported yet");
 			return false;
 		}
+
+	    private void PerformApiRequest(bool useTicket, params Request[] requests)
+	    {
+	        RequestEnvelope requestEnvelope = new RequestEnvelope
+	        {
+	            StatusCode = 2,
+	            RequestId = _random.NextULong(),
+                Longitude = Utils.FloatToULong(0),
+	            Latitude = Utils.FloatToULong(0),
+                Altitude = 10d,
+	            Unknown12 = 989,
+                Requests =
+                {
+                    requests
+                }
+	        };
+
+	        if (useTicket)
+	        {
+	            requestEnvelope.AuthInfo = _authInfo;
+	        }
+	        else
+	        {
+	            //TODO: Use ticket
+	        }
+            
+            //TODO: Call RPC
+
+            //TODO: Decode response
+        }
+        
 
 	}
 }
