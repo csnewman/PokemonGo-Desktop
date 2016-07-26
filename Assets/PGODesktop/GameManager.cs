@@ -19,14 +19,14 @@ namespace PGODesktop
 		public GameObject LoginMessagePanel;
 		public Text LoginMessage;
 		public GameObject LoggingInPanel;
-		private INetworkInterface network;
+		private INetworkInterface _network;
 		private bool _loggedIn;
 
 		private void Start ()
 		{
 			//To use the real live pokemmon go servers, swop to DesktopNetworkInterface
 			//network = new FakeNetworkInterface ();
-			network = new DesktopNetworkInterface();
+			_network = new DesktopNetworkInterface();
 
 			LoginPanel.SetActive (true);
 			LoginMessagePanel.SetActive (false);
@@ -37,26 +37,35 @@ namespace PGODesktop
 
 		private IEnumerator BeginLogin ()
 		{
-			yield return new EnterForeground ();
-			LoginPanel.SetActive (false);
+		    if (_loggedIn)
+		    {
+                throw new Exception("Already logged in?");
+		    }
+            
+            yield return new EnterForeground ();
+            LoginPanel.SetActive (false);
 			LoginMessagePanel.SetActive (false);
 			LoggingInPanel.SetActive (true);
 
 			//TODO: Show logging in dialog
 
 			yield return new EnterBackground ();
-			_loggedIn = network.loginPTC (UsernameField.text, PasswordField.text);
+		    PtcLoginResult result = _network.LoginPtc(UsernameField.text, PasswordField.text);
 
-			if (_loggedIn) {
-				Debug.Log ("Logged in!");
-				//TODO: Start gameplay
-			} else {
+			if (result == PtcLoginResult.Success)
+			{
+			    _loggedIn = true;
+                Debug.Log ("Logged in!");
+                yield return new EnterForeground();
+                LoggingInPanel.SetActive(false);
+                //TODO: Start gameplay
+            } else {
 				Debug.Log ("Login failed!");
 				yield return new EnterForeground ();
 				LoggingInPanel.SetActive (false);
 				LoginPanel.SetActive (true);
 				LoginMessagePanel.SetActive (true);
-				LoginMessage.text = "Login Failed!";
+				LoginMessage.text = result.ToString();
 				LoginMessagePanel.GetComponent<AutoDestroy> ().ResetTime ();
 			}
 		}
