@@ -578,13 +578,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ad153d2fa8c9414798c7ef801a895e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoggingInPanel: {fileID: 1237741147}
-  LoginButton: {fileID: 1032785877}
-  LoginMessage: {fileID: 1053571365}
-  LoginMessagePanel: {fileID: 1828835335}
-  LoginPanel: {fileID: 2126204762}
-  PasswordField: {fileID: 223307296}
-  UsernameField: {fileID: 1260986351}
+  _loggingInPanel: {fileID: 1237741147}
+  _loginButton: {fileID: 1032785877}
+  _loginMessage: {fileID: 1053571365}
+  _loginMessagePanel: {fileID: 1828835335}
+  _loginPanel: {fileID: 2126204762}
+  _passwordField: {fileID: 223307296}
+  _usernameField: {fileID: 1260986351}
 --- !u!4 &372272195
 Transform:
   m_ObjectHideFlags: 0
