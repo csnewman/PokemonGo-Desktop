@@ -1,44 +1,114 @@
-﻿using System;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Coroutine.cs" company="">
+//   
+// </copyright>
+// <summary>
+//   The coroutine.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
 using System.Collections;
 
 namespace SimpleCoroutines
 {
-    public class Coroutine
-    {
-        private String _id;
-        private IEnumerator _block;
-        private Boolean _canceled;
+	/// <summary>
+	/// The coroutine.
+	/// </summary>
+	public class Coroutine
+	{
+		#region  Fields
 
-        public Coroutine(String id, IEnumerator block)
-        {
-            _id = id;
-            _block = block;
-            _canceled = false;
-        }
+		/// <summary>
+		/// The _block.
+		/// </summary>
+		private IEnumerator _block;
 
-        public void Cancel()
-        {
-            _canceled = true;
-        }
+		/// <summary>
+		/// The _canceled.
+		/// </summary>
+		private bool _canceled;
 
-        public bool IsCanceled()
-        {
-            return _canceled;
-        }
+		/// <summary>
+		/// The _id.
+		/// </summary>
+		private string _id;
 
-        public void setCanceled(bool can)
-        {
-            _canceled = can;
-        }
+		#endregion
 
-        public IEnumerator GetBlock()
-        {
-            return _block;
-        }
+		#region  Constructors
 
-        public String GetId()
-        {
-            return _id;
-        }
-    }
+		/// <summary>
+		/// Initializes a new instance of the <see cref="Coroutine"/> class.
+		/// </summary>
+		/// <param name="id">
+		/// The id.
+		/// </param>
+		/// <param name="block">
+		/// The block.
+		/// </param>
+		public Coroutine(string id, IEnumerator block)
+		{
+			this._id = id;
+			this._block = block;
+			this._canceled = false;
+		}
+
+		#endregion
+
+		#region  Methods - Public
+
+		/// <summary>
+		/// The cancel.
+		/// </summary>
+		public void Cancel()
+		{
+			this._canceled = true;
+		}
+
+		/// <summary>
+		/// The is canceled.
+		/// </summary>
+		/// <returns>
+		/// The <see cref="bool"/>.
+		/// </returns>
+		public bool IsCanceled()
+		{
+			return this._canceled;
+		}
+
+		/// <summary>
+		/// The set canceled.
+		/// </summary>
+		/// <param name="can">
+		/// The can.
+		/// </param>
+		public void SetCanceled(bool can)
+		{
+			this._canceled = can;
+		}
+
+		/// <summary>
+		/// The get block.
+		/// </summary>
+		/// <returns>
+		/// The <see cref="IEnumerator"/>.
+		/// </returns>
+		public IEnumerator GetBlock()
+		{
+			return this._block;
+		}
+
+		/// <summary>
+		/// The get id.
+		/// </summary>
+		/// <returns>
+		/// The <see cref="string"/>.
+		/// </returns>
+		public string GetId()
+		{
+			return this._id;
+		}
+
+		#endregion
+	}
 }

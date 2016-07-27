@@ -1,21 +1,67 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="AutoDestroy.cs" company="">
+//   
+// </copyright>
+// <summary>
+//   The auto destroy.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
-public class AutoDestroy : MonoBehaviour {
+using System.Diagnostics.CodeAnalysis;
+using UnityEngine;
+
+/// <summary>
+/// The auto destroy.
+/// </summary>
+public class AutoDestroy : MonoBehaviour
+{
+	#region  Fields
+
+	/// <summary>
+	/// The life.
+	/// </summary>
+	[SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1401:FieldsMustBePrivate", Justification = "Reviewed. Suppression is OK here.")]
 	public float Life;
+
+	/// <summary>
+	/// The _created.
+	/// </summary>
 	private float _created;
 
-	void OnEnable () {
-		_created = Time.time;
+	#endregion
+
+	#region  Methods - Public
+
+	/// <summary>
+	/// The reset time.
+	/// </summary>
+	public void ResetTime()
+	{
+		this._created = Time.time;
 	}
 
-	public void ResetTime(){
-		_created = Time.time;
+	#endregion
+
+	#region  Methods - Private
+
+	/// <summary>
+	/// The on enable.
+	/// </summary>
+	private void OnEnable()
+	{
+		this._created = Time.time;
 	}
-	
-	void Update () {
-		if(Time.time - _created > Life){
-			gameObject.SetActive (false);
+
+	/// <summary>
+	/// The update.
+	/// </summary>
+	private void Update()
+	{
+		if (Time.time - this._created > this.Life)
+		{
+			this.gameObject.SetActive(false);
 		}
 	}
+
+	#endregion
 }

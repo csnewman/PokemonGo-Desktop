@@ -1,8 +1,20 @@
-﻿using UnityEngine;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="EnterBackground.cs" company="">
+//   
+// </copyright>
+// <summary>
+//   The enter background.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+using UnityEngine;
 
 namespace SimpleCoroutines
 {
-    public class EnterBackground : YieldInstruction
-    {
-    }
+	/// <summary>
+	/// The enter background.
+	/// </summary>
+	public class EnterBackground : YieldInstruction
+	{
+	}
 }

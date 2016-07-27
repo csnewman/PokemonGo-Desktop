@@ -1,12 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="PtcLoginResult.cs" company="">
+//   
+// </copyright>
+// <summary>
+//   The ptc login result.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace PGODesktop.Network
 {
-    public enum PtcLoginResult
-    {
-        Success, VerificationNeeded, InvalidCredentials, Error
-    }
+	/// <summary>
+	/// The Pokemon Trainer Club login result.
+	/// </summary>
+	public enum PtcLoginResult
+	{
+		/// <summary>
+		/// The success.
+		/// </summary>
+		Success,
+
+		/// <summary>
+		/// The verification needed.
+		/// </summary>
+		VerificationNeeded,
+
+		/// <summary>
+		/// The invalid credentials.
+		/// </summary>
+		InvalidCredentials,
+
+		/// <summary>
+		/// The error.
+		/// </summary>
+		Error
+	}
 }
