@@ -31,7 +31,8 @@ namespace PGODesktop
 		/// <summary>
 		/// The logging in panel.
 		/// </summary>
-		[SerializeField] private GameObject _loggingInPanel;
+		[SerializeField]
+		private GameObject _loggingInPanel;
 
 		/// <summary>
 		/// The _network.
