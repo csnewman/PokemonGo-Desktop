@@ -1,10 +1,12 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="AutoDestroy.cs" company="">
-//   
+// <copyright company="Error22" file="AutoDestroy.cs">
+//   Copyright (c) 2016 Error22 All Rights Reserved. 
+//   See License.txt for License Information.
 // </copyright>
 // <summary>
 //   The auto destroy.
 // </summary>
+//  
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Diagnostics.CodeAnalysis;
@@ -20,8 +22,8 @@ public class AutoDestroy : MonoBehaviour
 	/// <summary>
 	/// The life.
 	/// </summary>
-	[SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1401:FieldsMustBePrivate", Justification = "Reviewed. Suppression is OK here.")]
-	public float Life;
+	[SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1401:FieldsMustBePrivate",
+		Justification = "Reviewed. Suppression is OK here.")] public float Life;
 
 	/// <summary>
 	/// The _created.

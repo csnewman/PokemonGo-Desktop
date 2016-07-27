@@ -1,12 +1,14 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="INetworkInterface.cs" company="">
-//   
+// <copyright company="Error22" file="INetworkInterface.cs">
+//   Copyright (c) 2016 Error22 All Rights Reserved. 
+//   See License.txt for License Information.
 // </copyright>
 // <summary>
 //   The NetworkInterface interface.
 // </summary>
+// 
 // --------------------------------------------------------------------------------------------------------------------
-
+ 
 namespace PGODesktop.Network
 {
 	/// <summary>

@@ -1,10 +1,12 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="DesktopNetworkInterface.cs" company="">
-//   
+// <copyright company="Error22" file="DesktopNetworkInterface.cs">
+//   Copyright (c) 2016 Error22 All Rights Reserved. 
+//   See License.txt for License Information.
 // </copyright>
 // <summary>
 //   The desktop network interface.
-// </summary>
+// </summary> 
+// 
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Collections.Generic;
@@ -66,14 +68,14 @@ namespace PGODesktop.Network
 		#region  Fields
 
 		/// <summary>
-		/// The _random.
-		/// </summary>
-		private readonly Random _random;
-
-		/// <summary>
 		/// The authorization info.
 		/// </summary>
 		private RequestEnvelope.Types.AuthInfo _authInfo;
+
+		/// <summary>
+		/// The _random.
+		/// </summary>
+		private readonly Random _random;
 
 		#endregion
 
@@ -212,7 +214,9 @@ namespace PGODesktop.Network
 				Latitude = Utils.FloatToULong(0),
 				Altitude = 10d,
 				Unknown12 = 989,
-				Requests = { requests }
+				Requests = {
+                  requests 
+               }
 			};
 
 			if (useTicket)

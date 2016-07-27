@@ -1,18 +1,18 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Utils.cs" company="">
-//   
+// <copyright company="Error22" file="Utils.cs">
+//   Copyright (c) 2016 Error22 All Rights Reserved. 
+//   See License.txt for License Information.
 // </copyright>
 // <summary>
 //   The utils.
 // </summary>
+// 
 // --------------------------------------------------------------------------------------------------------------------
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using Google.Protobuf;
 using POGOProtos.Networking.Requests;
-using POGOProtos.Networking.Requests.Messages;
 using RestSharp;
 
 namespace PGODesktop

@@ -1,10 +1,12 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="PtcLoginResult.cs" company="">
-//   
+// <copyright company="Error22" file="PtcLoginResult.cs">
+//   Copyright (c) 2016 Error22 All Rights Reserved. 
+//   See License.txt for License Information.
 // </copyright>
 // <summary>
-//   The ptc login result.
+//   The Pokemon Trainer Club login result.
 // </summary>
+//  
 // --------------------------------------------------------------------------------------------------------------------
 
 namespace PGODesktop.Network

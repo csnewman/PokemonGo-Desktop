@@ -1,10 +1,12 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="GameManager.cs" company="">
-//   
+// <copyright company="Error22" file="GameManager.cs">
+//   Copyright (c) 2016 Error22 All Rights Reserved. 
+//   See License.txt for License Information.
 // </copyright>
 // <summary>
 //   The game manager.
 // </summary>
+// 
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Collections;
@@ -35,11 +37,6 @@ namespace PGODesktop
 		private GameObject _loggingInPanel;
 
 		/// <summary>
-		/// The _network.
-		/// </summary>
-		private INetworkInterface _network;
-
-		/// <summary>
 		/// The login button.
 		/// </summary>
 		[SerializeField]
@@ -62,6 +59,11 @@ namespace PGODesktop
 		/// </summary>
 		[SerializeField]
 		private GameObject _loginPanel;
+
+		/// <summary>
+		/// The _network.
+		/// </summary>
+		private INetworkInterface _network;
 
 		/// <summary>
 		/// The password field.
