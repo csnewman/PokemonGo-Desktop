@@ -7,6 +7,9 @@ namespace PGODesktop.Network
 {
     public enum PtcLoginResult
     {
-        Success, VerificationNeeded, InvalidCredentials, Error
+        Success,
+        VerificationNeeded,
+        InvalidCredentials,
+        Error
     }
 }

@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System;
-using System.Net;
 using System.Collections;
-using System.Collections.Generic;
 using PGODesktop.Network;
+using PGODesktop.UI;
 using POGOProtos.Networking.Requests;
 using POGOProtos.Networking.Requests.Messages;
 using POGOProtos.Networking.Responses;
@@ -12,31 +11,28 @@ using SimpleCoroutines;
 
 namespace PGODesktop
 {
-
     public class GameManager : MonoBehaviour
-	{
-		public GameObject LoginPanel;
-		public InputField UsernameField;
-		public InputField PasswordField;
-		public Button LoginButton;
-		public GameObject LoginMessagePanel;
-		public Text LoginMessage;
-		public GameObject LoggingInPanel;
-		private INetworkInterface _network;
-		private bool _loggedIn;
+    {
+        public GameObject LoginPanel;
+        public InputField UsernameField;
+        public InputField PasswordField;
+        public Button LoginButton;
+        public GameObject LoginMessagePanel;
+        public Text LoginMessage;
+        public GameObject LoggingInPanel;
+        private INetworkInterface _network;
+        private bool _loggedIn;
 
-		private void Start ()
-		{
+        private void Start()
+        {
             //To use the real live pokemmon go servers, swop to DesktopNetworkInterface
             //network = new FakeNetworkInterface ();
             _network = new DesktopNetworkInterface();
 
-			LoginPanel.SetActive (true);
-			LoginMessagePanel.SetActive (false);
-			LoginButton.onClick.AddListener(delegate {
-				CoroutineManager.Start ("login", BeginLogin ());
-			});
-		}
+            LoginPanel.SetActive(true);
+            LoginMessagePanel.SetActive(false);
+            LoginButton.onClick.AddListener(delegate { CoroutineManager.Start("login", BeginLogin()); });
+        }
 
         private IEnumerator BeginLogin()
         {
@@ -62,8 +58,9 @@ namespace PGODesktop
                 yield return new EnterForeground();
                 LoggingInPanel.SetActive(false);
                 //TODO: Start gameplay
-                GetPlayerResponse response = _network.PerformApiRequest<GetPlayerResponse>(RequestType.GetPlayer, new GetPlayerMessage());
-                Debug.Log("Player Data: "+ response.PlayerData);
+                GetPlayerResponse response = _network.PerformApiRequest<GetPlayerResponse>(RequestType.GetPlayer,
+                    new GetPlayerMessage());
+                Debug.Log("Player Data: " + response.PlayerData);
             }
             else
             {
@@ -77,11 +74,8 @@ namespace PGODesktop
             }
         }
 
-        private void Update ()
-		{
-
-
-		}
-	}
-
+        private void Update()
+        {
+        }
+    }
 }
