@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Threading;
+using Google.Protobuf;
+using POGOProtos.Networking.Envelopes;
+using POGOProtos.Networking.Requests;
 
 namespace PGODesktop.Network
 {
@@ -26,6 +29,15 @@ namespace PGODesktop.Network
 			return false;
 		}
 
+	    public TResponse PerformApiRequest<TResponse>(RequestType type, IMessage message) where TResponse : IMessage, new()
+	    {
+	        throw new NotImplementedException();
+	    }
+
+	    public ResponseEnvelope PerformApiRequest(params Request[] requests)
+	    {
+	        throw new NotImplementedException();
+	    }
 	}
 }
 

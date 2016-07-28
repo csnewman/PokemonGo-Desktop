@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Google.Protobuf;
+using POGOProtos.Networking.Envelopes;
 using POGOProtos.Networking.Requests;
 using POGOProtos.Networking.Requests.Messages;
 using RestSharp;
@@ -75,6 +76,13 @@ namespace PGODesktop
 	            RequestType = type,
                 RequestMessage = message.ToByteString()
 	        };
+	    }
+
+	    public static T Get<T>(this ResponseEnvelope envelope, int index) where T : IMessage, new()
+	    {
+	        T t = new T();
+            t.MergeFrom(envelope.Returns[index]);
+	        return t;
 	    }
 
     }
