@@ -1,0 +1,236 @@
+fileFormatVersion: 2
+guid: e7f4aea5efbc1184dbbb4ad932a72999
+timeCreated: 1469738618
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Pokemon Go Logo
+    21300002: Pokemon Company
+    21300004: Niantic
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Pokemon Go Logo
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 514
+        width: 512
+        height: 322
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 160, y: -40}
+        - {x: 130, y: -5}
+        - {x: -105, y: -5}
+        - {x: -142, y: -40}
+        - {x: -142, y: -130}
+        - {x: -109, y: -161}
+        - {x: -23, y: -161}
+        - {x: -14, y: -157}
+        - {x: 19, y: -161}
+        - {x: 117, y: -161}
+        - {x: 152, y: -144}
+        - {x: 160, y: -121}
+      - - {x: 37, y: 7}
+        - {x: 128, y: -12}
+        - {x: 148, y: -9}
+        - {x: 206, y: -30}
+        - {x: 215, y: -30}
+        - {x: 225, y: -18}
+        - {x: 256, y: 86}
+        - {x: 256, y: 99}
+        - {x: 255, y: 101}
+        - {x: 160, y: 121}
+        - {x: 152, y: 118}
+        - {x: 129, y: 127}
+        - {x: 89, y: 132}
+        - {x: 53, y: 128}
+        - {x: 34, y: 161}
+        - {x: 16, y: 161}
+        - {x: -114, y: 116}
+        - {x: -145, y: 123}
+        - {x: -196, y: 133}
+        - {x: -256, y: 102}
+        - {x: -256, y: 78}
+        - {x: -237, y: 44}
+        - {x: -195, y: -30}
+        - {x: -177, y: -30}
+        - {x: -136, y: -18}
+        - {x: -90, y: -10}
+        - {x: -46, y: 4}
+        - {x: 6, y: -10}
+      - - {x: 226, y: -7}
+        - {x: 226, y: -17}
+        - {x: 228, y: -21}
+        - {x: 248, y: -21}
+        - {x: 248, y: -7}
+    - name: Pokemon Company
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 837
+        width: 512
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 148, y: 14}
+        - {x: 148, y: -24}
+        - {x: 250, y: -24}
+        - {x: 256, y: -22}
+        - {x: 256, y: 14}
+      - - {x: -256, y: 23}
+        - {x: -256, y: -13}
+        - {x: -255, y: -17}
+        - {x: -204, y: -17}
+        - {x: -203, y: -14}
+        - {x: -203, y: -9}
+        - {x: -203, y: -11}
+        - {x: -200, y: -17}
+        - {x: -178, y: -17}
+        - {x: -177, y: -13}
+        - {x: -177, y: 14}
+        - {x: -200, y: 23}
+      - - {x: -18, y: -11}
+        - {x: -16, y: -17}
+        - {x: 38, y: -17}
+        - {x: 38, y: 9}
+        - {x: 32, y: 13}
+        - {x: 26, y: 14}
+        - {x: 11, y: 13}
+        - {x: 9, y: 11}
+        - {x: 9, y: 6}
+        - {x: 9, y: 8}
+        - {x: -1, y: 24}
+        - {x: -165, y: 24}
+        - {x: -165, y: -17}
+        - {x: -19, y: -17}
+        - {x: -18, y: -14}
+        - {x: -18, y: -9}
+      - - {x: 109, y: 13}
+        - {x: 107, y: 11}
+        - {x: 107, y: 6}
+        - {x: 107, y: 8}
+        - {x: 105, y: 12}
+        - {x: 86, y: 18}
+        - {x: 77, y: 3}
+        - {x: 80, y: 10}
+        - {x: 84, y: 20}
+        - {x: 75, y: 22}
+        - {x: 57, y: 22}
+        - {x: 50, y: 16}
+        - {x: 50, y: -11}
+        - {x: 59, y: -17}
+        - {x: 148, y: -17}
+        - {x: 148, y: 11}
+        - {x: 137, y: 18}
+    - name: Niantic
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 336
+        height: 513
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -168, y: 256.5}
+        - {x: -168, y: -256.5}
+        - {x: 168, y: -256.5}
+        - {x: 168, y: 256.5}
+      - - {x: -146, y: 233.5}
+        - {x: 147, y: 233.5}
+        - {x: 147, y: -154.5}
+        - {x: -146, y: -154.5}
+      - - {x: 28, y: -63.5}
+        - {x: 62, y: 43.5}
+        - {x: 84, y: 37.5}
+        - {x: 97, y: 35.5}
+        - {x: 103, y: 40.5}
+        - {x: 103, y: 52.5}
+        - {x: 97, y: 61.5}
+        - {x: 77, y: 82.5}
+        - {x: 102, y: 82.5}
+        - {x: 112, y: 89.5}
+        - {x: 112, y: 103.5}
+        - {x: 89, y: 121.5}
+        - {x: 80, y: 131.5}
+        - {x: 69, y: 160.5}
+        - {x: 35, y: 189.5}
+        - {x: 17, y: 191.5}
+        - {x: -23, y: 191.5}
+        - {x: -43, y: 182.5}
+        - {x: -54, y: 174.5}
+        - {x: -76, y: 188.5}
+        - {x: -98, y: 191.5}
+        - {x: -104, y: 191.5}
+        - {x: -109, y: 176.5}
+        - {x: -94, y: 147.5}
+        - {x: -109, y: 143.5}
+        - {x: -111, y: 141.5}
+        - {x: -111, y: 129.5}
+        - {x: -106, y: 119.5}
+        - {x: -83, y: 111.5}
+        - {x: -82, y: 92.5}
+        - {x: -59, y: 20.5}
+        - {x: -39, y: -39.5}
+        - {x: -43, y: -83.5}
+        - {x: -40, y: -99.5}
+        - {x: -29, y: -111.5}
+        - {x: -7, y: -111.5}
+        - {x: 20, y: -106.5}
+        - {x: 39, y: -89.5}
+        - {x: 39, y: -85.5}
+        - {x: 38, y: -82.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
