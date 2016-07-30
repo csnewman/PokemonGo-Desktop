@@ -25,7 +25,7 @@ namespace POGOProtos.Networking.Responses {
             "CjxQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVzcG9uc2VzL0dldEhhdGNoZWRF",
             "Z2dzUmVzcG9uc2UucHJvdG8SH1BPR09Qcm90b3MuTmV0d29ya2luZy5SZXNw",
             "b25zZXMijgEKFkdldEhhdGNoZWRFZ2dzUmVzcG9uc2USDwoHc3VjY2VzcxgB",
-            "IAEoCBIWCgpwb2tlbW9uX2lkGAIgAygEQgIQARIaChJleHBlcmllbmNlX2F3",
+            "IAEoCBIWCgpwb2tlbW9uX2lkGAIgAygGQgIQARIaChJleHBlcmllbmNlX2F3",
             "YXJkZWQYAyADKAUSFQoNY2FuZHlfYXdhcmRlZBgEIAMoBRIYChBzdGFyZHVz",
             "dF9hd2FyZGVkGAUgAygFYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -88,7 +88,7 @@ namespace POGOProtos.Networking.Responses {
     /// <summary>Field number for the "pokemon_id" field.</summary>
     public const int PokemonIdFieldNumber = 2;
     private static readonly pb::FieldCodec<ulong> _repeated_pokemonId_codec
-        = pb::FieldCodec.ForUInt64(18);
+        = pb::FieldCodec.ForFixed64(18);
     private readonly pbc::RepeatedField<ulong> pokemonId_ = new pbc::RepeatedField<ulong>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<ulong> PokemonId {
@@ -214,7 +214,7 @@ namespace POGOProtos.Networking.Responses {
             break;
           }
           case 18:
-          case 16: {
+          case 17: {
             pokemonId_.AddEntriesFrom(input, _repeated_pokemonId_codec);
             break;
           }

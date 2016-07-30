@@ -73,6 +73,9 @@ namespace POGOProtos.Networking.Requests.Messages {
     /// <summary>Field number for the "pokemon_id" field.</summary>
     public const int PokemonIdFieldNumber = 1;
     private ulong pokemonId_;
+    /// <summary>
+    ///  needs to be uint64, tested by Grover
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong PokemonId {
       get { return pokemonId_; }

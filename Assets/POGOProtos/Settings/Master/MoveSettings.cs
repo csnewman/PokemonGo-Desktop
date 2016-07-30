@@ -24,20 +24,20 @@ namespace POGOProtos.Settings.Master {
           string.Concat(
             "Ci1QT0dPUHJvdG9zL1NldHRpbmdzL01hc3Rlci9Nb3ZlU2V0dGluZ3MucHJv",
             "dG8SGlBPR09Qcm90b3MuU2V0dGluZ3MuTWFzdGVyGiJQT0dPUHJvdG9zL0Vu",
-            "dW1zL1Bva2Vtb25UeXBlLnByb3RvGipQT0dPUHJvdG9zL0VudW1zL1Bva2Vt",
-            "b25Nb3ZlbWVudFR5cGUucHJvdG8iuQMKDE1vdmVTZXR0aW5ncxI6Cgttb3Zl",
-            "bWVudF9pZBgBIAEoDjIlLlBPR09Qcm90b3MuRW51bXMuUG9rZW1vbk1vdmVt",
-            "ZW50VHlwZRIUCgxhbmltYXRpb25faWQYAiABKAUSMwoMcG9rZW1vbl90eXBl",
-            "GAMgASgOMh0uUE9HT1Byb3Rvcy5FbnVtcy5Qb2tlbW9uVHlwZRINCgVwb3dl",
-            "chgEIAEoAhIXCg9hY2N1cmFjeV9jaGFuY2UYBSABKAISFwoPY3JpdGljYWxf",
-            "Y2hhbmNlGAYgASgCEhMKC2hlYWxfc2NhbGFyGAcgASgCEhsKE3N0YW1pbmFf",
-            "bG9zc19zY2FsYXIYCCABKAISGQoRdHJhaW5lcl9sZXZlbF9taW4YCSABKAUS",
-            "GQoRdHJhaW5lcl9sZXZlbF9tYXgYCiABKAUSEAoIdmZ4X25hbWUYCyABKAkS",
-            "EwoLZHVyYXRpb25fbXMYDCABKAUSHgoWZGFtYWdlX3dpbmRvd19zdGFydF9t",
-            "cxgNIAEoBRIcChRkYW1hZ2Vfd2luZG93X2VuZF9tcxgOIAEoBRIUCgxlbmVy",
-            "Z3lfZGVsdGEYDyABKAViBnByb3RvMw=="));
+            "dW1zL1Bva2Vtb25UeXBlLnByb3RvGiJQT0dPUHJvdG9zL0VudW1zL1Bva2Vt",
+            "b25Nb3ZlLnByb3RvIrEDCgxNb3ZlU2V0dGluZ3MSMgoLbW92ZW1lbnRfaWQY",
+            "ASABKA4yHS5QT0dPUHJvdG9zLkVudW1zLlBva2Vtb25Nb3ZlEhQKDGFuaW1h",
+            "dGlvbl9pZBgCIAEoBRIzCgxwb2tlbW9uX3R5cGUYAyABKA4yHS5QT0dPUHJv",
+            "dG9zLkVudW1zLlBva2Vtb25UeXBlEg0KBXBvd2VyGAQgASgCEhcKD2FjY3Vy",
+            "YWN5X2NoYW5jZRgFIAEoAhIXCg9jcml0aWNhbF9jaGFuY2UYBiABKAISEwoL",
+            "aGVhbF9zY2FsYXIYByABKAISGwoTc3RhbWluYV9sb3NzX3NjYWxhchgIIAEo",
+            "AhIZChF0cmFpbmVyX2xldmVsX21pbhgJIAEoBRIZChF0cmFpbmVyX2xldmVs",
+            "X21heBgKIAEoBRIQCgh2ZnhfbmFtZRgLIAEoCRITCgtkdXJhdGlvbl9tcxgM",
+            "IAEoBRIeChZkYW1hZ2Vfd2luZG93X3N0YXJ0X21zGA0gASgFEhwKFGRhbWFn",
+            "ZV93aW5kb3dfZW5kX21zGA4gASgFEhQKDGVuZXJneV9kZWx0YRgPIAEoBWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::POGOProtos.Enums.PokemonTypeReflection.Descriptor, global::POGOProtos.Enums.PokemonMovementTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::POGOProtos.Enums.PokemonTypeReflection.Descriptor, global::POGOProtos.Enums.PokemonMoveReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Settings.Master.MoveSettings), global::POGOProtos.Settings.Master.MoveSettings.Parser, new[]{ "MovementId", "AnimationId", "PokemonType", "Power", "AccuracyChance", "CriticalChance", "HealScalar", "StaminaLossScalar", "TrainerLevelMin", "TrainerLevelMax", "VfxName", "DurationMs", "DamageWindowStartMs", "DamageWindowEndMs", "EnergyDelta" }, null, null, null)
           }));
@@ -94,9 +94,9 @@ namespace POGOProtos.Settings.Master {
 
     /// <summary>Field number for the "movement_id" field.</summary>
     public const int MovementIdFieldNumber = 1;
-    private global::POGOProtos.Enums.PokemonMovementType movementId_ = 0;
+    private global::POGOProtos.Enums.PokemonMove movementId_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::POGOProtos.Enums.PokemonMovementType MovementId {
+    public global::POGOProtos.Enums.PokemonMove MovementId {
       get { return movementId_; }
       set {
         movementId_ = value;
@@ -490,7 +490,7 @@ namespace POGOProtos.Settings.Master {
             input.SkipLastField();
             break;
           case 8: {
-            movementId_ = (global::POGOProtos.Enums.PokemonMovementType) input.ReadEnum();
+            movementId_ = (global::POGOProtos.Enums.PokemonMove) input.ReadEnum();
             break;
           }
           case 16: {

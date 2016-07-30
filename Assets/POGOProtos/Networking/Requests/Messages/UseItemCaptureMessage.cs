@@ -25,14 +25,14 @@ namespace POGOProtos.Networking.Requests.Messages {
             "CkNQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVxdWVzdHMvTWVzc2FnZXMvVXNl",
             "SXRlbUNhcHR1cmVNZXNzYWdlLnByb3RvEidQT0dPUHJvdG9zLk5ldHdvcmtp",
             "bmcuUmVxdWVzdHMuTWVzc2FnZXMaJlBPR09Qcm90b3MvSW52ZW50b3J5L0l0",
-            "ZW0vSXRlbUlkLnByb3RvInsKFVVzZUl0ZW1DYXB0dXJlTWVzc2FnZRIyCgdp",
+            "ZW0vSXRlbUlkLnByb3RvInkKFVVzZUl0ZW1DYXB0dXJlTWVzc2FnZRIyCgdp",
             "dGVtX2lkGAEgASgOMiEuUE9HT1Byb3Rvcy5JbnZlbnRvcnkuSXRlbS5JdGVt",
-            "SWQSFAoMZW5jb3VudGVyX2lkGAIgASgGEhgKEHNwYXduX3BvaW50X2d1aWQY",
-            "AyABKAliBnByb3RvMw=="));
+            "SWQSFAoMZW5jb3VudGVyX2lkGAIgASgGEhYKDnNwYXduX3BvaW50X2lkGAMg",
+            "ASgJYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Inventory.Item.ItemIdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.UseItemCaptureMessage), global::POGOProtos.Networking.Requests.Messages.UseItemCaptureMessage.Parser, new[]{ "ItemId", "EncounterId", "SpawnPointGuid" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.UseItemCaptureMessage), global::POGOProtos.Networking.Requests.Messages.UseItemCaptureMessage.Parser, new[]{ "ItemId", "EncounterId", "SpawnPointId" }, null, null, null)
           }));
     }
     #endregion
@@ -65,7 +65,7 @@ namespace POGOProtos.Networking.Requests.Messages {
     public UseItemCaptureMessage(UseItemCaptureMessage other) : this() {
       itemId_ = other.itemId_;
       encounterId_ = other.encounterId_;
-      spawnPointGuid_ = other.spawnPointGuid_;
+      spawnPointId_ = other.spawnPointId_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -95,14 +95,14 @@ namespace POGOProtos.Networking.Requests.Messages {
       }
     }
 
-    /// <summary>Field number for the "spawn_point_guid" field.</summary>
-    public const int SpawnPointGuidFieldNumber = 3;
-    private string spawnPointGuid_ = "";
+    /// <summary>Field number for the "spawn_point_id" field.</summary>
+    public const int SpawnPointIdFieldNumber = 3;
+    private string spawnPointId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string SpawnPointGuid {
-      get { return spawnPointGuid_; }
+    public string SpawnPointId {
+      get { return spawnPointId_; }
       set {
-        spawnPointGuid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        spawnPointId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -121,7 +121,7 @@ namespace POGOProtos.Networking.Requests.Messages {
       }
       if (ItemId != other.ItemId) return false;
       if (EncounterId != other.EncounterId) return false;
-      if (SpawnPointGuid != other.SpawnPointGuid) return false;
+      if (SpawnPointId != other.SpawnPointId) return false;
       return true;
     }
 
@@ -130,7 +130,7 @@ namespace POGOProtos.Networking.Requests.Messages {
       int hash = 1;
       if (ItemId != 0) hash ^= ItemId.GetHashCode();
       if (EncounterId != 0UL) hash ^= EncounterId.GetHashCode();
-      if (SpawnPointGuid.Length != 0) hash ^= SpawnPointGuid.GetHashCode();
+      if (SpawnPointId.Length != 0) hash ^= SpawnPointId.GetHashCode();
       return hash;
     }
 
@@ -149,9 +149,9 @@ namespace POGOProtos.Networking.Requests.Messages {
         output.WriteRawTag(17);
         output.WriteFixed64(EncounterId);
       }
-      if (SpawnPointGuid.Length != 0) {
+      if (SpawnPointId.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteString(SpawnPointGuid);
+        output.WriteString(SpawnPointId);
       }
     }
 
@@ -164,8 +164,8 @@ namespace POGOProtos.Networking.Requests.Messages {
       if (EncounterId != 0UL) {
         size += 1 + 8;
       }
-      if (SpawnPointGuid.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SpawnPointGuid);
+      if (SpawnPointId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SpawnPointId);
       }
       return size;
     }
@@ -181,8 +181,8 @@ namespace POGOProtos.Networking.Requests.Messages {
       if (other.EncounterId != 0UL) {
         EncounterId = other.EncounterId;
       }
-      if (other.SpawnPointGuid.Length != 0) {
-        SpawnPointGuid = other.SpawnPointGuid;
+      if (other.SpawnPointId.Length != 0) {
+        SpawnPointId = other.SpawnPointId;
       }
     }
 
@@ -203,7 +203,7 @@ namespace POGOProtos.Networking.Requests.Messages {
             break;
           }
           case 26: {
-            SpawnPointGuid = input.ReadString();
+            SpawnPointId = input.ReadString();
             break;
           }
         }

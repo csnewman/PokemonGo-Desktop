@@ -28,7 +28,7 @@ namespace POGOProtos.Networking.Envelopes {
             "cm90bxo2UE9HT1Byb3Rvcy9OZXR3b3JraW5nL0VudmVsb3Blcy9Vbmtub3du",
             "NlJlc3BvbnNlLnByb3RvIrgCChBSZXNwb25zZUVudmVsb3BlEhMKC3N0YXR1",
             "c19jb2RlGAEgASgFEhIKCnJlcXVlc3RfaWQYAiABKAQSDwoHYXBpX3VybBgD",
-            "IAEoCRJDCgh1bmtub3duNhgGIAEoCzIxLlBPR09Qcm90b3MuTmV0d29ya2lu",
+            "IAEoCRJDCgh1bmtub3duNhgGIAMoCzIxLlBPR09Qcm90b3MuTmV0d29ya2lu",
             "Zy5FbnZlbG9wZXMuVW5rbm93bjZSZXNwb25zZRJACgthdXRoX3RpY2tldBgH",
             "IAEoCzIrLlBPR09Qcm90b3MuTmV0d29ya2luZy5FbnZlbG9wZXMuQXV0aFRp",
             "Y2tldBIPCgdyZXR1cm5zGGQgAygMEg0KBWVycm9yGGUgASgJGkMKCFVua25v",
@@ -71,7 +71,7 @@ namespace POGOProtos.Networking.Envelopes {
       statusCode_ = other.statusCode_;
       requestId_ = other.requestId_;
       apiUrl_ = other.apiUrl_;
-      Unknown6 = other.unknown6_ != null ? other.Unknown6.Clone() : null;
+      unknown6_ = other.unknown6_.Clone();
       AuthTicket = other.authTicket_ != null ? other.AuthTicket.Clone() : null;
       returns_ = other.returns_.Clone();
       error_ = other.error_;
@@ -117,13 +117,12 @@ namespace POGOProtos.Networking.Envelopes {
 
     /// <summary>Field number for the "unknown6" field.</summary>
     public const int Unknown6FieldNumber = 6;
-    private global::POGOProtos.Networking.Envelopes.Unknown6Response unknown6_;
+    private static readonly pb::FieldCodec<global::POGOProtos.Networking.Envelopes.Unknown6Response> _repeated_unknown6_codec
+        = pb::FieldCodec.ForMessage(50, global::POGOProtos.Networking.Envelopes.Unknown6Response.Parser);
+    private readonly pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Unknown6Response> unknown6_ = new pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Unknown6Response>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::POGOProtos.Networking.Envelopes.Unknown6Response Unknown6 {
+    public pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Unknown6Response> Unknown6 {
       get { return unknown6_; }
-      set {
-        unknown6_ = value;
-      }
     }
 
     /// <summary>Field number for the "auth_ticket" field.</summary>
@@ -174,7 +173,7 @@ namespace POGOProtos.Networking.Envelopes {
       if (StatusCode != other.StatusCode) return false;
       if (RequestId != other.RequestId) return false;
       if (ApiUrl != other.ApiUrl) return false;
-      if (!object.Equals(Unknown6, other.Unknown6)) return false;
+      if(!unknown6_.Equals(other.unknown6_)) return false;
       if (!object.Equals(AuthTicket, other.AuthTicket)) return false;
       if(!returns_.Equals(other.returns_)) return false;
       if (Error != other.Error) return false;
@@ -187,7 +186,7 @@ namespace POGOProtos.Networking.Envelopes {
       if (StatusCode != 0) hash ^= StatusCode.GetHashCode();
       if (RequestId != 0UL) hash ^= RequestId.GetHashCode();
       if (ApiUrl.Length != 0) hash ^= ApiUrl.GetHashCode();
-      if (unknown6_ != null) hash ^= Unknown6.GetHashCode();
+      hash ^= unknown6_.GetHashCode();
       if (authTicket_ != null) hash ^= AuthTicket.GetHashCode();
       hash ^= returns_.GetHashCode();
       if (Error.Length != 0) hash ^= Error.GetHashCode();
@@ -213,10 +212,7 @@ namespace POGOProtos.Networking.Envelopes {
         output.WriteRawTag(26);
         output.WriteString(ApiUrl);
       }
-      if (unknown6_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(Unknown6);
-      }
+      unknown6_.WriteTo(output, _repeated_unknown6_codec);
       if (authTicket_ != null) {
         output.WriteRawTag(58);
         output.WriteMessage(AuthTicket);
@@ -240,9 +236,7 @@ namespace POGOProtos.Networking.Envelopes {
       if (ApiUrl.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ApiUrl);
       }
-      if (unknown6_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Unknown6);
-      }
+      size += unknown6_.CalculateSize(_repeated_unknown6_codec);
       if (authTicket_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AuthTicket);
       }
@@ -267,12 +261,7 @@ namespace POGOProtos.Networking.Envelopes {
       if (other.ApiUrl.Length != 0) {
         ApiUrl = other.ApiUrl;
       }
-      if (other.unknown6_ != null) {
-        if (unknown6_ == null) {
-          unknown6_ = new global::POGOProtos.Networking.Envelopes.Unknown6Response();
-        }
-        Unknown6.MergeFrom(other.Unknown6);
-      }
+      unknown6_.Add(other.unknown6_);
       if (other.authTicket_ != null) {
         if (authTicket_ == null) {
           authTicket_ = new global::POGOProtos.Networking.Envelopes.AuthTicket();
@@ -306,10 +295,7 @@ namespace POGOProtos.Networking.Envelopes {
             break;
           }
           case 50: {
-            if (unknown6_ == null) {
-              unknown6_ = new global::POGOProtos.Networking.Envelopes.Unknown6Response();
-            }
-            input.ReadMessage(unknown6_);
+            unknown6_.AddEntriesFrom(input, _repeated_unknown6_codec);
             break;
           }
           case 58: {

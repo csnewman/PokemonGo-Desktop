@@ -25,7 +25,7 @@ namespace POGOProtos.Data {
             "CiZQT0dPUHJvdG9zL0RhdGEvQXNzZXREaWdlc3RFbnRyeS5wcm90bxIPUE9H",
             "T1Byb3Rvcy5EYXRhIncKEEFzc2V0RGlnZXN0RW50cnkSEAoIYXNzZXRfaWQY",
             "ASABKAkSEwoLYnVuZGxlX25hbWUYAiABKAkSDwoHdmVyc2lvbhgDIAEoAxIQ",
-            "CghjaGVja3N1bRgEIAEoDRIMCgRzaXplGAUgASgFEgsKA2tleRgGIAEoDGIG",
+            "CghjaGVja3N1bRgEIAEoBxIMCgRzaXplGAUgASgFEgsKA2tleRgGIAEoDGIG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -194,8 +194,8 @@ namespace POGOProtos.Data {
         output.WriteInt64(Version);
       }
       if (Checksum != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Checksum);
+        output.WriteRawTag(37);
+        output.WriteFixed32(Checksum);
       }
       if (Size != 0) {
         output.WriteRawTag(40);
@@ -220,7 +220,7 @@ namespace POGOProtos.Data {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Version);
       }
       if (Checksum != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Checksum);
+        size += 1 + 4;
       }
       if (Size != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Size);
@@ -276,8 +276,8 @@ namespace POGOProtos.Data {
             Version = input.ReadInt64();
             break;
           }
-          case 32: {
-            Checksum = input.ReadUInt32();
+          case 37: {
+            Checksum = input.ReadFixed32();
             break;
           }
           case 40: {

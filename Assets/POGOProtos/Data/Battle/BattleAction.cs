@@ -31,14 +31,14 @@ namespace POGOProtos.Data.Battle {
             "Y3Rpb25UeXBlEhcKD2FjdGlvbl9zdGFydF9tcxgCIAEoAxITCgtkdXJhdGlv",
             "bl9tcxgDIAEoBRIUCgxlbmVyZ3lfZGVsdGEYBSABKAUSFgoOYXR0YWNrZXJf",
             "aW5kZXgYBiABKAUSFAoMdGFyZ2V0X2luZGV4GAcgASgFEhkKEWFjdGl2ZV9w",
-            "b2tlbW9uX2lkGAggASgEEkAKDXBsYXllcl9qb2luZWQYCSABKAsyKS5QT0dP",
+            "b2tlbW9uX2lkGAggASgGEkAKDXBsYXllcl9qb2luZWQYCSABKAsyKS5QT0dP",
             "UHJvdG9zLkRhdGEuQmF0dGxlLkJhdHRsZVBhcnRpY2lwYW50Ej0KDmJhdHRs",
             "ZV9yZXN1bHRzGAogASgLMiUuUE9HT1Byb3Rvcy5EYXRhLkJhdHRsZS5CYXR0",
             "bGVSZXN1bHRzEioKImRhbWFnZV93aW5kb3dzX3N0YXJ0X3RpbWVzdGFtcF9t",
             "c3MYCyABKAMSKAogZGFtYWdlX3dpbmRvd3NfZW5kX3RpbWVzdGFtcF9tc3MY",
             "DCABKAMSPgoLcGxheWVyX2xlZnQYDSABKAsyKS5QT0dPUHJvdG9zLkRhdGEu",
             "QmF0dGxlLkJhdHRsZVBhcnRpY2lwYW50EhkKEXRhcmdldF9wb2tlbW9uX2lk",
-            "GA4gASgEYgZwcm90bzM="));
+            "GA4gASgGYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Data.Battle.BattleResultsReflection.Descriptor, global::POGOProtos.Data.Battle.BattleActionTypeReflection.Descriptor, global::POGOProtos.Data.Battle.BattleParticipantReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -316,8 +316,8 @@ namespace POGOProtos.Data.Battle {
         output.WriteInt32(TargetIndex);
       }
       if (ActivePokemonId != 0UL) {
-        output.WriteRawTag(64);
-        output.WriteUInt64(ActivePokemonId);
+        output.WriteRawTag(65);
+        output.WriteFixed64(ActivePokemonId);
       }
       if (playerJoined_ != null) {
         output.WriteRawTag(74);
@@ -340,8 +340,8 @@ namespace POGOProtos.Data.Battle {
         output.WriteMessage(PlayerLeft);
       }
       if (TargetPokemonId != 0UL) {
-        output.WriteRawTag(112);
-        output.WriteUInt64(TargetPokemonId);
+        output.WriteRawTag(113);
+        output.WriteFixed64(TargetPokemonId);
       }
     }
 
@@ -367,7 +367,7 @@ namespace POGOProtos.Data.Battle {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TargetIndex);
       }
       if (ActivePokemonId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(ActivePokemonId);
+        size += 1 + 8;
       }
       if (playerJoined_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerJoined);
@@ -385,7 +385,7 @@ namespace POGOProtos.Data.Battle {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerLeft);
       }
       if (TargetPokemonId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TargetPokemonId);
+        size += 1 + 8;
       }
       return size;
     }
@@ -477,8 +477,8 @@ namespace POGOProtos.Data.Battle {
             TargetIndex = input.ReadInt32();
             break;
           }
-          case 64: {
-            ActivePokemonId = input.ReadUInt64();
+          case 65: {
+            ActivePokemonId = input.ReadFixed64();
             break;
           }
           case 74: {
@@ -510,8 +510,8 @@ namespace POGOProtos.Data.Battle {
             input.ReadMessage(playerLeft_);
             break;
           }
-          case 112: {
-            TargetPokemonId = input.ReadUInt64();
+          case 113: {
+            TargetPokemonId = input.ReadFixed64();
             break;
           }
         }

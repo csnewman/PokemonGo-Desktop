@@ -25,7 +25,7 @@ namespace POGOProtos.Networking.Requests.Messages {
             "CkNQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVxdWVzdHMvTWVzc2FnZXMvVXBn",
             "cmFkZVBva2Vtb25NZXNzYWdlLnByb3RvEidQT0dPUHJvdG9zLk5ldHdvcmtp",
             "bmcuUmVxdWVzdHMuTWVzc2FnZXMiKwoVVXBncmFkZVBva2Vtb25NZXNzYWdl",
-            "EhIKCnBva2Vtb25faWQYASABKARiBnByb3RvMw=="));
+            "EhIKCnBva2Vtb25faWQYASABKAZiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -111,8 +111,8 @@ namespace POGOProtos.Networking.Requests.Messages {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (PokemonId != 0UL) {
-        output.WriteRawTag(8);
-        output.WriteUInt64(PokemonId);
+        output.WriteRawTag(9);
+        output.WriteFixed64(PokemonId);
       }
     }
 
@@ -120,7 +120,7 @@ namespace POGOProtos.Networking.Requests.Messages {
     public int CalculateSize() {
       int size = 0;
       if (PokemonId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(PokemonId);
+        size += 1 + 8;
       }
       return size;
     }
@@ -143,8 +143,8 @@ namespace POGOProtos.Networking.Requests.Messages {
           default:
             input.SkipLastField();
             break;
-          case 8: {
-            PokemonId = input.ReadUInt64();
+          case 9: {
+            PokemonId = input.ReadFixed64();
             break;
           }
         }

@@ -30,7 +30,7 @@ namespace POGOProtos.Networking.Envelopes {
             "Ni5wcm90byKkBAoPUmVxdWVzdEVudmVsb3BlEhMKC3N0YXR1c19jb2RlGAEg",
             "ASgFEhIKCnJlcXVlc3RfaWQYAyABKAQSOQoIcmVxdWVzdHMYBCADKAsyJy5Q",
             "T0dPUHJvdG9zLk5ldHdvcmtpbmcuUmVxdWVzdHMuUmVxdWVzdBI7Cgh1bmtu",
-            "b3duNhgGIAEoCzIpLlBPR09Qcm90b3MuTmV0d29ya2luZy5FbnZlbG9wZXMu",
+            "b3duNhgGIAMoCzIpLlBPR09Qcm90b3MuTmV0d29ya2luZy5FbnZlbG9wZXMu",
             "VW5rbm93bjYSEAoIbGF0aXR1ZGUYByABKAESEQoJbG9uZ2l0dWRlGAggASgB",
             "EhAKCGFsdGl0dWRlGAkgASgBEkwKCWF1dGhfaW5mbxgKIAEoCzI5LlBPR09Q",
             "cm90b3MuTmV0d29ya2luZy5FbnZlbG9wZXMuUmVxdWVzdEVudmVsb3BlLkF1",
@@ -77,7 +77,7 @@ namespace POGOProtos.Networking.Envelopes {
       statusCode_ = other.statusCode_;
       requestId_ = other.requestId_;
       requests_ = other.requests_.Clone();
-      Unknown6 = other.unknown6_ != null ? other.Unknown6.Clone() : null;
+      unknown6_ = other.unknown6_.Clone();
       latitude_ = other.latitude_;
       longitude_ = other.longitude_;
       altitude_ = other.altitude_;
@@ -125,13 +125,12 @@ namespace POGOProtos.Networking.Envelopes {
 
     /// <summary>Field number for the "unknown6" field.</summary>
     public const int Unknown6FieldNumber = 6;
-    private global::POGOProtos.Networking.Envelopes.Unknown6 unknown6_;
+    private static readonly pb::FieldCodec<global::POGOProtos.Networking.Envelopes.Unknown6> _repeated_unknown6_codec
+        = pb::FieldCodec.ForMessage(50, global::POGOProtos.Networking.Envelopes.Unknown6.Parser);
+    private readonly pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Unknown6> unknown6_ = new pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Unknown6>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::POGOProtos.Networking.Envelopes.Unknown6 Unknown6 {
+    public pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Unknown6> Unknown6 {
       get { return unknown6_; }
-      set {
-        unknown6_ = value;
-      }
     }
 
     /// <summary>Field number for the "latitude" field.</summary>
@@ -216,7 +215,7 @@ namespace POGOProtos.Networking.Envelopes {
       if (StatusCode != other.StatusCode) return false;
       if (RequestId != other.RequestId) return false;
       if(!requests_.Equals(other.requests_)) return false;
-      if (!object.Equals(Unknown6, other.Unknown6)) return false;
+      if(!unknown6_.Equals(other.unknown6_)) return false;
       if (Latitude != other.Latitude) return false;
       if (Longitude != other.Longitude) return false;
       if (Altitude != other.Altitude) return false;
@@ -232,7 +231,7 @@ namespace POGOProtos.Networking.Envelopes {
       if (StatusCode != 0) hash ^= StatusCode.GetHashCode();
       if (RequestId != 0UL) hash ^= RequestId.GetHashCode();
       hash ^= requests_.GetHashCode();
-      if (unknown6_ != null) hash ^= Unknown6.GetHashCode();
+      hash ^= unknown6_.GetHashCode();
       if (Latitude != 0D) hash ^= Latitude.GetHashCode();
       if (Longitude != 0D) hash ^= Longitude.GetHashCode();
       if (Altitude != 0D) hash ^= Altitude.GetHashCode();
@@ -258,10 +257,7 @@ namespace POGOProtos.Networking.Envelopes {
         output.WriteUInt64(RequestId);
       }
       requests_.WriteTo(output, _repeated_requests_codec);
-      if (unknown6_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(Unknown6);
-      }
+      unknown6_.WriteTo(output, _repeated_unknown6_codec);
       if (Latitude != 0D) {
         output.WriteRawTag(57);
         output.WriteDouble(Latitude);
@@ -298,9 +294,7 @@ namespace POGOProtos.Networking.Envelopes {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(RequestId);
       }
       size += requests_.CalculateSize(_repeated_requests_codec);
-      if (unknown6_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Unknown6);
-      }
+      size += unknown6_.CalculateSize(_repeated_unknown6_codec);
       if (Latitude != 0D) {
         size += 1 + 8;
       }
@@ -334,12 +328,7 @@ namespace POGOProtos.Networking.Envelopes {
         RequestId = other.RequestId;
       }
       requests_.Add(other.requests_);
-      if (other.unknown6_ != null) {
-        if (unknown6_ == null) {
-          unknown6_ = new global::POGOProtos.Networking.Envelopes.Unknown6();
-        }
-        Unknown6.MergeFrom(other.Unknown6);
-      }
+      unknown6_.Add(other.unknown6_);
       if (other.Latitude != 0D) {
         Latitude = other.Latitude;
       }
@@ -387,10 +376,7 @@ namespace POGOProtos.Networking.Envelopes {
             break;
           }
           case 50: {
-            if (unknown6_ == null) {
-              unknown6_ = new global::POGOProtos.Networking.Envelopes.Unknown6();
-            }
-            input.ReadMessage(unknown6_);
+            unknown6_.AddEntriesFrom(input, _repeated_unknown6_codec);
             break;
           }
           case 57: {

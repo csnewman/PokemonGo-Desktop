@@ -23,14 +23,14 @@ namespace POGOProtos.Networking.Envelopes {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci5QT0dPUHJvdG9zL05ldHdvcmtpbmcvRW52ZWxvcGVzL1Vua25vd242LnBy",
-            "b3RvEh9QT0dPUHJvdG9zLk5ldHdvcmtpbmcuRW52ZWxvcGVzIoABCghVbmtu",
-            "b3duNhIQCgh1bmtub3duMRgBIAEoBRJECgh1bmtub3duMhgCIAEoCzIyLlBP",
-            "R09Qcm90b3MuTmV0d29ya2luZy5FbnZlbG9wZXMuVW5rbm93bjYuVW5rbm93",
-            "bjIaHAoIVW5rbm93bjISEAoIdW5rbm93bjEYASABKAxiBnByb3RvMw=="));
+            "b3RvEh9QT0dPUHJvdG9zLk5ldHdvcmtpbmcuRW52ZWxvcGVzIoQBCghVbmtu",
+            "b3duNhIUCgxyZXF1ZXN0X3R5cGUYASABKAUSRAoIdW5rbm93bjIYAiABKAsy",
+            "Mi5QT0dPUHJvdG9zLk5ldHdvcmtpbmcuRW52ZWxvcGVzLlVua25vd242LlVu",
+            "a25vd24yGhwKCFVua25vd24yEhAKCHVua25vd24xGAEgASgMYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Unknown6), global::POGOProtos.Networking.Envelopes.Unknown6.Parser, new[]{ "Unknown1", "Unknown2" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Unknown6.Types.Unknown2), global::POGOProtos.Networking.Envelopes.Unknown6.Types.Unknown2.Parser, new[]{ "Unknown1" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Unknown6), global::POGOProtos.Networking.Envelopes.Unknown6.Parser, new[]{ "RequestType", "Unknown2" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Unknown6.Types.Unknown2), global::POGOProtos.Networking.Envelopes.Unknown6.Types.Unknown2.Parser, new[]{ "Unknown1" }, null, null, null)})
           }));
     }
     #endregion
@@ -61,7 +61,7 @@ namespace POGOProtos.Networking.Envelopes {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Unknown6(Unknown6 other) : this() {
-      unknown1_ = other.unknown1_;
+      requestType_ = other.requestType_;
       Unknown2 = other.unknown2_ != null ? other.Unknown2.Clone() : null;
     }
 
@@ -70,17 +70,17 @@ namespace POGOProtos.Networking.Envelopes {
       return new Unknown6(this);
     }
 
-    /// <summary>Field number for the "unknown1" field.</summary>
-    public const int Unknown1FieldNumber = 1;
-    private int unknown1_;
+    /// <summary>Field number for the "request_type" field.</summary>
+    public const int RequestTypeFieldNumber = 1;
+    private int requestType_;
     /// <summary>
-    /// 6
+    ///  5 for IAPs, 6 is unknown still
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Unknown1 {
-      get { return unknown1_; }
+    public int RequestType {
+      get { return requestType_; }
       set {
-        unknown1_ = value;
+        requestType_ = value;
       }
     }
 
@@ -108,7 +108,7 @@ namespace POGOProtos.Networking.Envelopes {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Unknown1 != other.Unknown1) return false;
+      if (RequestType != other.RequestType) return false;
       if (!object.Equals(Unknown2, other.Unknown2)) return false;
       return true;
     }
@@ -116,7 +116,7 @@ namespace POGOProtos.Networking.Envelopes {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Unknown1 != 0) hash ^= Unknown1.GetHashCode();
+      if (RequestType != 0) hash ^= RequestType.GetHashCode();
       if (unknown2_ != null) hash ^= Unknown2.GetHashCode();
       return hash;
     }
@@ -128,9 +128,9 @@ namespace POGOProtos.Networking.Envelopes {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Unknown1 != 0) {
+      if (RequestType != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(Unknown1);
+        output.WriteInt32(RequestType);
       }
       if (unknown2_ != null) {
         output.WriteRawTag(18);
@@ -141,8 +141,8 @@ namespace POGOProtos.Networking.Envelopes {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Unknown1 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Unknown1);
+      if (RequestType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RequestType);
       }
       if (unknown2_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Unknown2);
@@ -155,8 +155,8 @@ namespace POGOProtos.Networking.Envelopes {
       if (other == null) {
         return;
       }
-      if (other.Unknown1 != 0) {
-        Unknown1 = other.Unknown1;
+      if (other.RequestType != 0) {
+        RequestType = other.RequestType;
       }
       if (other.unknown2_ != null) {
         if (unknown2_ == null) {
@@ -175,7 +175,7 @@ namespace POGOProtos.Networking.Envelopes {
             input.SkipLastField();
             break;
           case 8: {
-            Unknown1 = input.ReadInt32();
+            RequestType = input.ReadInt32();
             break;
           }
           case 18: {

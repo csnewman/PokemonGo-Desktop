@@ -24,19 +24,20 @@ namespace POGOProtos.Networking.Responses {
           string.Concat(
             "Cj9QT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVzcG9uc2VzL0dldEluY2Vuc2VQ",
             "b2tlbW9uUmVzcG9uc2UucHJvdG8SH1BPR09Qcm90b3MuTmV0d29ya2luZy5S",
-            "ZXNwb25zZXMi7QIKGUdldEluY2Vuc2VQb2tlbW9uUmVzcG9uc2USUQoGcmVz",
-            "dWx0GAEgASgOMkEuUE9HT1Byb3Rvcy5OZXR3b3JraW5nLlJlc3BvbnNlcy5H",
-            "ZXRJbmNlbnNlUG9rZW1vblJlc3BvbnNlLlJlc3VsdBIXCg9wb2tlbW9uX3R5",
-            "cGVfaWQYAiABKAUSEAoIbGF0aXR1ZGUYAyABKAESEQoJbG9uZ2l0dWRlGAQg",
-            "ASgBEhoKEmVuY291bnRlcl9sb2NhdGlvbhgFIAEoCRIUCgxlbmNvdW50ZXJf",
-            "aWQYBiABKAQSHgoWZGlzYXBwZWFyX3RpbWVzdGFtcF9tcxgHIAEoAyJtCgZS",
-            "ZXN1bHQSHQoZSU5DRU5TRV9FTkNPVU5URVJfVU5LTk9XThAAEh8KG0lOQ0VO",
-            "U0VfRU5DT1VOVEVSX0FWQUlMQUJMRRABEiMKH0lOQ0VOU0VfRU5DT1VOVEVS",
-            "X05PVF9BVkFJTEFCTEUQAmIGcHJvdG8z"));
+            "ZXNwb25zZXMaIFBPR09Qcm90b3MvRW51bXMvUG9rZW1vbklkLnByb3RvIoUD",
+            "ChlHZXRJbmNlbnNlUG9rZW1vblJlc3BvbnNlElEKBnJlc3VsdBgBIAEoDjJB",
+            "LlBPR09Qcm90b3MuTmV0d29ya2luZy5SZXNwb25zZXMuR2V0SW5jZW5zZVBv",
+            "a2Vtb25SZXNwb25zZS5SZXN1bHQSLwoKcG9rZW1vbl9pZBgCIAEoDjIbLlBP",
+            "R09Qcm90b3MuRW51bXMuUG9rZW1vbklkEhAKCGxhdGl0dWRlGAMgASgBEhEK",
+            "CWxvbmdpdHVkZRgEIAEoARIaChJlbmNvdW50ZXJfbG9jYXRpb24YBSABKAkS",
+            "FAoMZW5jb3VudGVyX2lkGAYgASgGEh4KFmRpc2FwcGVhcl90aW1lc3RhbXBf",
+            "bXMYByABKAMibQoGUmVzdWx0Eh0KGUlOQ0VOU0VfRU5DT1VOVEVSX1VOS05P",
+            "V04QABIfChtJTkNFTlNFX0VOQ09VTlRFUl9BVkFJTEFCTEUQARIjCh9JTkNF",
+            "TlNFX0VOQ09VTlRFUl9OT1RfQVZBSUxBQkxFEAJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::POGOProtos.Enums.PokemonIdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.GetIncensePokemonResponse), global::POGOProtos.Networking.Responses.GetIncensePokemonResponse.Parser, new[]{ "Result", "PokemonTypeId", "Latitude", "Longitude", "EncounterLocation", "EncounterId", "DisappearTimestampMs" }, null, new[]{ typeof(global::POGOProtos.Networking.Responses.GetIncensePokemonResponse.Types.Result) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.GetIncensePokemonResponse), global::POGOProtos.Networking.Responses.GetIncensePokemonResponse.Parser, new[]{ "Result", "PokemonId", "Latitude", "Longitude", "EncounterLocation", "EncounterId", "DisappearTimestampMs" }, null, new[]{ typeof(global::POGOProtos.Networking.Responses.GetIncensePokemonResponse.Types.Result) }, null)
           }));
     }
     #endregion
@@ -68,7 +69,7 @@ namespace POGOProtos.Networking.Responses {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetIncensePokemonResponse(GetIncensePokemonResponse other) : this() {
       result_ = other.result_;
-      pokemonTypeId_ = other.pokemonTypeId_;
+      pokemonId_ = other.pokemonId_;
       latitude_ = other.latitude_;
       longitude_ = other.longitude_;
       encounterLocation_ = other.encounterLocation_;
@@ -92,17 +93,14 @@ namespace POGOProtos.Networking.Responses {
       }
     }
 
-    /// <summary>Field number for the "pokemon_type_id" field.</summary>
-    public const int PokemonTypeIdFieldNumber = 2;
-    private int pokemonTypeId_;
-    /// <summary>
-    ///  TODO: PokemonType.proto or PokemonId.proto
-    /// </summary>
+    /// <summary>Field number for the "pokemon_id" field.</summary>
+    public const int PokemonIdFieldNumber = 2;
+    private global::POGOProtos.Enums.PokemonId pokemonId_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int PokemonTypeId {
-      get { return pokemonTypeId_; }
+    public global::POGOProtos.Enums.PokemonId PokemonId {
+      get { return pokemonId_; }
       set {
-        pokemonTypeId_ = value;
+        pokemonId_ = value;
       }
     }
 
@@ -175,7 +173,7 @@ namespace POGOProtos.Networking.Responses {
         return true;
       }
       if (Result != other.Result) return false;
-      if (PokemonTypeId != other.PokemonTypeId) return false;
+      if (PokemonId != other.PokemonId) return false;
       if (Latitude != other.Latitude) return false;
       if (Longitude != other.Longitude) return false;
       if (EncounterLocation != other.EncounterLocation) return false;
@@ -188,7 +186,7 @@ namespace POGOProtos.Networking.Responses {
     public override int GetHashCode() {
       int hash = 1;
       if (Result != 0) hash ^= Result.GetHashCode();
-      if (PokemonTypeId != 0) hash ^= PokemonTypeId.GetHashCode();
+      if (PokemonId != 0) hash ^= PokemonId.GetHashCode();
       if (Latitude != 0D) hash ^= Latitude.GetHashCode();
       if (Longitude != 0D) hash ^= Longitude.GetHashCode();
       if (EncounterLocation.Length != 0) hash ^= EncounterLocation.GetHashCode();
@@ -208,9 +206,9 @@ namespace POGOProtos.Networking.Responses {
         output.WriteRawTag(8);
         output.WriteEnum((int) Result);
       }
-      if (PokemonTypeId != 0) {
+      if (PokemonId != 0) {
         output.WriteRawTag(16);
-        output.WriteInt32(PokemonTypeId);
+        output.WriteEnum((int) PokemonId);
       }
       if (Latitude != 0D) {
         output.WriteRawTag(25);
@@ -225,8 +223,8 @@ namespace POGOProtos.Networking.Responses {
         output.WriteString(EncounterLocation);
       }
       if (EncounterId != 0UL) {
-        output.WriteRawTag(48);
-        output.WriteUInt64(EncounterId);
+        output.WriteRawTag(49);
+        output.WriteFixed64(EncounterId);
       }
       if (DisappearTimestampMs != 0L) {
         output.WriteRawTag(56);
@@ -240,8 +238,8 @@ namespace POGOProtos.Networking.Responses {
       if (Result != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
       }
-      if (PokemonTypeId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PokemonTypeId);
+      if (PokemonId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PokemonId);
       }
       if (Latitude != 0D) {
         size += 1 + 8;
@@ -253,7 +251,7 @@ namespace POGOProtos.Networking.Responses {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EncounterLocation);
       }
       if (EncounterId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(EncounterId);
+        size += 1 + 8;
       }
       if (DisappearTimestampMs != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(DisappearTimestampMs);
@@ -269,8 +267,8 @@ namespace POGOProtos.Networking.Responses {
       if (other.Result != 0) {
         Result = other.Result;
       }
-      if (other.PokemonTypeId != 0) {
-        PokemonTypeId = other.PokemonTypeId;
+      if (other.PokemonId != 0) {
+        PokemonId = other.PokemonId;
       }
       if (other.Latitude != 0D) {
         Latitude = other.Latitude;
@@ -302,7 +300,7 @@ namespace POGOProtos.Networking.Responses {
             break;
           }
           case 16: {
-            PokemonTypeId = input.ReadInt32();
+            pokemonId_ = (global::POGOProtos.Enums.PokemonId) input.ReadEnum();
             break;
           }
           case 25: {
@@ -317,8 +315,8 @@ namespace POGOProtos.Networking.Responses {
             EncounterLocation = input.ReadString();
             break;
           }
-          case 48: {
-            EncounterId = input.ReadUInt64();
+          case 49: {
+            EncounterId = input.ReadFixed64();
             break;
           }
           case 56: {

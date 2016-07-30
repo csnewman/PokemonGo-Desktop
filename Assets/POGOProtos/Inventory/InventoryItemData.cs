@@ -26,31 +26,30 @@ namespace POGOProtos.Inventory {
             "bxIUUE9HT1Byb3Rvcy5JbnZlbnRvcnkaKFBPR09Qcm90b3MvSW52ZW50b3J5",
             "L0l0ZW0vSXRlbURhdGEucHJvdG8aJ1BPR09Qcm90b3MvSW52ZW50b3J5L0Fw",
             "cGxpZWRJdGVtcy5wcm90bxooUE9HT1Byb3Rvcy9JbnZlbnRvcnkvRWdnSW5j",
-            "dWJhdG9ycy5wcm90bxooUE9HT1Byb3Rvcy9JbnZlbnRvcnkvUG9rZW1vbkZh",
-            "bWlseS5wcm90bxosUE9HT1Byb3Rvcy9JbnZlbnRvcnkvSW52ZW50b3J5VXBn",
-            "cmFkZXMucHJvdG8aIVBPR09Qcm90b3MvRGF0YS9Qb2tlbW9uRGF0YS5wcm90",
-            "bxoiUE9HT1Byb3Rvcy9EYXRhL1Bva2VkZXhFbnRyeS5wcm90bxooUE9HT1By",
-            "b3Rvcy9EYXRhL1BsYXllci9QbGF5ZXJTdGF0cy5wcm90bxorUE9HT1Byb3Rv",
-            "cy9EYXRhL1BsYXllci9QbGF5ZXJDdXJyZW5jeS5wcm90bxopUE9HT1Byb3Rv",
-            "cy9EYXRhL1BsYXllci9QbGF5ZXJDYW1lcmEucHJvdG8i4wQKEUludmVudG9y",
-            "eUl0ZW1EYXRhEjIKDHBva2Vtb25fZGF0YRgBIAEoCzIcLlBPR09Qcm90b3Mu",
-            "RGF0YS5Qb2tlbW9uRGF0YRIxCgRpdGVtGAIgASgLMiMuUE9HT1Byb3Rvcy5J",
-            "bnZlbnRvcnkuSXRlbS5JdGVtRGF0YRI0Cg1wb2tlZGV4X2VudHJ5GAMgASgL",
-            "Mh0uUE9HT1Byb3Rvcy5EYXRhLlBva2VkZXhFbnRyeRI5CgxwbGF5ZXJfc3Rh",
-            "dHMYBCABKAsyIy5QT0dPUHJvdG9zLkRhdGEuUGxheWVyLlBsYXllclN0YXRz",
-            "Ej8KD3BsYXllcl9jdXJyZW5jeRgFIAEoCzImLlBPR09Qcm90b3MuRGF0YS5Q",
-            "bGF5ZXIuUGxheWVyQ3VycmVuY3kSOwoNcGxheWVyX2NhbWVyYRgGIAEoCzIk",
-            "LlBPR09Qcm90b3MuRGF0YS5QbGF5ZXIuUGxheWVyQ2FtZXJhEkMKEmludmVu",
-            "dG9yeV91cGdyYWRlcxgHIAEoCzInLlBPR09Qcm90b3MuSW52ZW50b3J5Lklu",
-            "dmVudG9yeVVwZ3JhZGVzEjkKDWFwcGxpZWRfaXRlbXMYCCABKAsyIi5QT0dP",
-            "UHJvdG9zLkludmVudG9yeS5BcHBsaWVkSXRlbXMSOwoOZWdnX2luY3ViYXRv",
-            "cnMYCSABKAsyIy5QT0dPUHJvdG9zLkludmVudG9yeS5FZ2dJbmN1YmF0b3Jz",
-            "EjsKDnBva2Vtb25fZmFtaWx5GAogASgLMiMuUE9HT1Byb3Rvcy5JbnZlbnRv",
-            "cnkuUG9rZW1vbkZhbWlseWIGcHJvdG8z"));
+            "dWJhdG9ycy5wcm90bxogUE9HT1Byb3Rvcy9JbnZlbnRvcnkvQ2FuZHkucHJv",
+            "dG8aLFBPR09Qcm90b3MvSW52ZW50b3J5L0ludmVudG9yeVVwZ3JhZGVzLnBy",
+            "b3RvGiFQT0dPUHJvdG9zL0RhdGEvUG9rZW1vbkRhdGEucHJvdG8aIlBPR09Q",
+            "cm90b3MvRGF0YS9Qb2tlZGV4RW50cnkucHJvdG8aKFBPR09Qcm90b3MvRGF0",
+            "YS9QbGF5ZXIvUGxheWVyU3RhdHMucHJvdG8aK1BPR09Qcm90b3MvRGF0YS9Q",
+            "bGF5ZXIvUGxheWVyQ3VycmVuY3kucHJvdG8aKVBPR09Qcm90b3MvRGF0YS9Q",
+            "bGF5ZXIvUGxheWVyQ2FtZXJhLnByb3RvItIEChFJbnZlbnRvcnlJdGVtRGF0",
+            "YRIyCgxwb2tlbW9uX2RhdGEYASABKAsyHC5QT0dPUHJvdG9zLkRhdGEuUG9r",
+            "ZW1vbkRhdGESMQoEaXRlbRgCIAEoCzIjLlBPR09Qcm90b3MuSW52ZW50b3J5",
+            "Lkl0ZW0uSXRlbURhdGESNAoNcG9rZWRleF9lbnRyeRgDIAEoCzIdLlBPR09Q",
+            "cm90b3MuRGF0YS5Qb2tlZGV4RW50cnkSOQoMcGxheWVyX3N0YXRzGAQgASgL",
+            "MiMuUE9HT1Byb3Rvcy5EYXRhLlBsYXllci5QbGF5ZXJTdGF0cxI/Cg9wbGF5",
+            "ZXJfY3VycmVuY3kYBSABKAsyJi5QT0dPUHJvdG9zLkRhdGEuUGxheWVyLlBs",
+            "YXllckN1cnJlbmN5EjsKDXBsYXllcl9jYW1lcmEYBiABKAsyJC5QT0dPUHJv",
+            "dG9zLkRhdGEuUGxheWVyLlBsYXllckNhbWVyYRJDChJpbnZlbnRvcnlfdXBn",
+            "cmFkZXMYByABKAsyJy5QT0dPUHJvdG9zLkludmVudG9yeS5JbnZlbnRvcnlV",
+            "cGdyYWRlcxI5Cg1hcHBsaWVkX2l0ZW1zGAggASgLMiIuUE9HT1Byb3Rvcy5J",
+            "bnZlbnRvcnkuQXBwbGllZEl0ZW1zEjsKDmVnZ19pbmN1YmF0b3JzGAkgASgL",
+            "MiMuUE9HT1Byb3Rvcy5JbnZlbnRvcnkuRWdnSW5jdWJhdG9ycxIqCgVjYW5k",
+            "eRgKIAEoCzIbLlBPR09Qcm90b3MuSW52ZW50b3J5LkNhbmR5YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::POGOProtos.Inventory.Item.ItemDataReflection.Descriptor, global::POGOProtos.Inventory.AppliedItemsReflection.Descriptor, global::POGOProtos.Inventory.EggIncubatorsReflection.Descriptor, global::POGOProtos.Inventory.PokemonFamilyReflection.Descriptor, global::POGOProtos.Inventory.InventoryUpgradesReflection.Descriptor, global::POGOProtos.Data.PokemonDataReflection.Descriptor, global::POGOProtos.Data.PokedexEntryReflection.Descriptor, global::POGOProtos.Data.Player.PlayerStatsReflection.Descriptor, global::POGOProtos.Data.Player.PlayerCurrencyReflection.Descriptor, global::POGOProtos.Data.Player.PlayerCameraReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::POGOProtos.Inventory.Item.ItemDataReflection.Descriptor, global::POGOProtos.Inventory.AppliedItemsReflection.Descriptor, global::POGOProtos.Inventory.EggIncubatorsReflection.Descriptor, global::POGOProtos.Inventory.CandyReflection.Descriptor, global::POGOProtos.Inventory.InventoryUpgradesReflection.Descriptor, global::POGOProtos.Data.PokemonDataReflection.Descriptor, global::POGOProtos.Data.PokedexEntryReflection.Descriptor, global::POGOProtos.Data.Player.PlayerStatsReflection.Descriptor, global::POGOProtos.Data.Player.PlayerCurrencyReflection.Descriptor, global::POGOProtos.Data.Player.PlayerCameraReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Inventory.InventoryItemData), global::POGOProtos.Inventory.InventoryItemData.Parser, new[]{ "PokemonData", "Item", "PokedexEntry", "PlayerStats", "PlayerCurrency", "PlayerCamera", "InventoryUpgrades", "AppliedItems", "EggIncubators", "PokemonFamily" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Inventory.InventoryItemData), global::POGOProtos.Inventory.InventoryItemData.Parser, new[]{ "PokemonData", "Item", "PokedexEntry", "PlayerStats", "PlayerCurrency", "PlayerCamera", "InventoryUpgrades", "AppliedItems", "EggIncubators", "Candy" }, null, null, null)
           }));
     }
     #endregion
@@ -90,7 +89,7 @@ namespace POGOProtos.Inventory {
       InventoryUpgrades = other.inventoryUpgrades_ != null ? other.InventoryUpgrades.Clone() : null;
       AppliedItems = other.appliedItems_ != null ? other.AppliedItems.Clone() : null;
       EggIncubators = other.eggIncubators_ != null ? other.EggIncubators.Clone() : null;
-      PokemonFamily = other.pokemonFamily_ != null ? other.PokemonFamily.Clone() : null;
+      Candy = other.candy_ != null ? other.Candy.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -197,14 +196,14 @@ namespace POGOProtos.Inventory {
       }
     }
 
-    /// <summary>Field number for the "pokemon_family" field.</summary>
-    public const int PokemonFamilyFieldNumber = 10;
-    private global::POGOProtos.Inventory.PokemonFamily pokemonFamily_;
+    /// <summary>Field number for the "candy" field.</summary>
+    public const int CandyFieldNumber = 10;
+    private global::POGOProtos.Inventory.Candy candy_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::POGOProtos.Inventory.PokemonFamily PokemonFamily {
-      get { return pokemonFamily_; }
+    public global::POGOProtos.Inventory.Candy Candy {
+      get { return candy_; }
       set {
-        pokemonFamily_ = value;
+        candy_ = value;
       }
     }
 
@@ -230,7 +229,7 @@ namespace POGOProtos.Inventory {
       if (!object.Equals(InventoryUpgrades, other.InventoryUpgrades)) return false;
       if (!object.Equals(AppliedItems, other.AppliedItems)) return false;
       if (!object.Equals(EggIncubators, other.EggIncubators)) return false;
-      if (!object.Equals(PokemonFamily, other.PokemonFamily)) return false;
+      if (!object.Equals(Candy, other.Candy)) return false;
       return true;
     }
 
@@ -246,7 +245,7 @@ namespace POGOProtos.Inventory {
       if (inventoryUpgrades_ != null) hash ^= InventoryUpgrades.GetHashCode();
       if (appliedItems_ != null) hash ^= AppliedItems.GetHashCode();
       if (eggIncubators_ != null) hash ^= EggIncubators.GetHashCode();
-      if (pokemonFamily_ != null) hash ^= PokemonFamily.GetHashCode();
+      if (candy_ != null) hash ^= Candy.GetHashCode();
       return hash;
     }
 
@@ -293,9 +292,9 @@ namespace POGOProtos.Inventory {
         output.WriteRawTag(74);
         output.WriteMessage(EggIncubators);
       }
-      if (pokemonFamily_ != null) {
+      if (candy_ != null) {
         output.WriteRawTag(82);
-        output.WriteMessage(PokemonFamily);
+        output.WriteMessage(Candy);
       }
     }
 
@@ -329,8 +328,8 @@ namespace POGOProtos.Inventory {
       if (eggIncubators_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EggIncubators);
       }
-      if (pokemonFamily_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PokemonFamily);
+      if (candy_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Candy);
       }
       return size;
     }
@@ -394,11 +393,11 @@ namespace POGOProtos.Inventory {
         }
         EggIncubators.MergeFrom(other.EggIncubators);
       }
-      if (other.pokemonFamily_ != null) {
-        if (pokemonFamily_ == null) {
-          pokemonFamily_ = new global::POGOProtos.Inventory.PokemonFamily();
+      if (other.candy_ != null) {
+        if (candy_ == null) {
+          candy_ = new global::POGOProtos.Inventory.Candy();
         }
-        PokemonFamily.MergeFrom(other.PokemonFamily);
+        Candy.MergeFrom(other.Candy);
       }
     }
 
@@ -474,10 +473,10 @@ namespace POGOProtos.Inventory {
             break;
           }
           case 82: {
-            if (pokemonFamily_ == null) {
-              pokemonFamily_ = new global::POGOProtos.Inventory.PokemonFamily();
+            if (candy_ == null) {
+              candy_ = new global::POGOProtos.Inventory.Candy();
             }
-            input.ReadMessage(pokemonFamily_);
+            input.ReadMessage(candy_);
             break;
           }
         }

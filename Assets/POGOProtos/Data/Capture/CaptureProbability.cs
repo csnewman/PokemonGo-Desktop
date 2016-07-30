@@ -24,10 +24,11 @@ namespace POGOProtos.Data.Capture {
           string.Concat(
             "CjBQT0dPUHJvdG9zL0RhdGEvQ2FwdHVyZS9DYXB0dXJlUHJvYmFiaWxpdHku",
             "cHJvdG8SF1BPR09Qcm90b3MuRGF0YS5DYXB0dXJlGiZQT0dPUHJvdG9zL0lu",
-            "dmVudG9yeS9JdGVtL0l0ZW1JZC5wcm90byKNAQoSQ2FwdHVyZVByb2JhYmls",
-            "aXR5EjgKDXBva2ViYWxsX3R5cGUYASADKA4yIS5QT0dPUHJvdG9zLkludmVu",
-            "dG9yeS5JdGVtLkl0ZW1JZBIbChNjYXB0dXJlX3Byb2JhYmlsaXR5GAIgAygC",
-            "EiAKGHJldGljbGVfZGlmZmljdWx0eV9zY2FsZRgMIAEoAWIGcHJvdG8z"));
+            "dmVudG9yeS9JdGVtL0l0ZW1JZC5wcm90byKVAQoSQ2FwdHVyZVByb2JhYmls",
+            "aXR5EjwKDXBva2ViYWxsX3R5cGUYASADKA4yIS5QT0dPUHJvdG9zLkludmVu",
+            "dG9yeS5JdGVtLkl0ZW1JZEICEAESHwoTY2FwdHVyZV9wcm9iYWJpbGl0eRgC",
+            "IAMoAkICEAESIAoYcmV0aWNsZV9kaWZmaWN1bHR5X3NjYWxlGAwgASgBYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Inventory.Item.ItemIdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

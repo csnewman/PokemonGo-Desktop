@@ -25,7 +25,7 @@ namespace POGOProtos.Networking.Requests.Messages {
             "CkZQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVxdWVzdHMvTWVzc2FnZXMvRm9y",
             "dERlcGxveVBva2Vtb25NZXNzYWdlLnByb3RvEidQT0dPUHJvdG9zLk5ldHdv",
             "cmtpbmcuUmVxdWVzdHMuTWVzc2FnZXMicgoYRm9ydERlcGxveVBva2Vtb25N",
-            "ZXNzYWdlEg8KB2ZvcnRfaWQYASABKAkSEgoKcG9rZW1vbl9pZBgCIAEoBBIX",
+            "ZXNzYWdlEg8KB2ZvcnRfaWQYASABKAkSEgoKcG9rZW1vbl9pZBgCIAEoBhIX",
             "Cg9wbGF5ZXJfbGF0aXR1ZGUYAyABKAESGAoQcGxheWVyX2xvbmdpdHVkZRgE",
             "IAEoAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -159,8 +159,8 @@ namespace POGOProtos.Networking.Requests.Messages {
         output.WriteString(FortId);
       }
       if (PokemonId != 0UL) {
-        output.WriteRawTag(16);
-        output.WriteUInt64(PokemonId);
+        output.WriteRawTag(17);
+        output.WriteFixed64(PokemonId);
       }
       if (PlayerLatitude != 0D) {
         output.WriteRawTag(25);
@@ -179,7 +179,7 @@ namespace POGOProtos.Networking.Requests.Messages {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FortId);
       }
       if (PokemonId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(PokemonId);
+        size += 1 + 8;
       }
       if (PlayerLatitude != 0D) {
         size += 1 + 8;
@@ -221,8 +221,8 @@ namespace POGOProtos.Networking.Requests.Messages {
             FortId = input.ReadString();
             break;
           }
-          case 16: {
-            PokemonId = input.ReadUInt64();
+          case 17: {
+            PokemonId = input.ReadFixed64();
             break;
           }
           case 25: {

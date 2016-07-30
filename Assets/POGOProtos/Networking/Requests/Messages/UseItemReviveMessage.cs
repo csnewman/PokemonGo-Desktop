@@ -27,7 +27,7 @@ namespace POGOProtos.Networking.Requests.Messages {
             "Zy5SZXF1ZXN0cy5NZXNzYWdlcxomUE9HT1Byb3Rvcy9JbnZlbnRvcnkvSXRl",
             "bS9JdGVtSWQucHJvdG8iXgoUVXNlSXRlbVJldml2ZU1lc3NhZ2USMgoHaXRl",
             "bV9pZBgBIAEoDjIhLlBPR09Qcm90b3MuSW52ZW50b3J5Lkl0ZW0uSXRlbUlk",
-            "EhIKCnBva2Vtb25faWQYAiABKARiBnByb3RvMw=="));
+            "EhIKCnBva2Vtb25faWQYAiABKAZiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Inventory.Item.ItemIdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -131,8 +131,8 @@ namespace POGOProtos.Networking.Requests.Messages {
         output.WriteEnum((int) ItemId);
       }
       if (PokemonId != 0UL) {
-        output.WriteRawTag(16);
-        output.WriteUInt64(PokemonId);
+        output.WriteRawTag(17);
+        output.WriteFixed64(PokemonId);
       }
     }
 
@@ -143,7 +143,7 @@ namespace POGOProtos.Networking.Requests.Messages {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ItemId);
       }
       if (PokemonId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(PokemonId);
+        size += 1 + 8;
       }
       return size;
     }
@@ -173,8 +173,8 @@ namespace POGOProtos.Networking.Requests.Messages {
             itemId_ = (global::POGOProtos.Inventory.Item.ItemId) input.ReadEnum();
             break;
           }
-          case 16: {
-            PokemonId = input.ReadUInt64();
+          case 17: {
+            PokemonId = input.ReadFixed64();
             break;
           }
         }
