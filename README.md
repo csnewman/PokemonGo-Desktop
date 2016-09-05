@@ -2,6 +2,9 @@
 An unofficial desktop version of the mobile game using unity. Designed to be close to the original game however slightly modified to allow better desktop support, such as WASD movement.
 This is not designed to be a cheating tool! It is meant to allow user who are unable to play the mobile version of the game, for whatever reason, to not be left out. 
 
+## Status
+This project has been cancelled (for now), I may take it backup once the hype has died down a bit. The main reason is due to the developers constantly changing the network protocol and adding security measures that prevent an app like this working. 
+
 ##Target platforms
 Using unity allows the project to be exported to numerous devices, however some devices require extra consideration when designing support them, so a select few platforms are being mainly focused upon.
 - Windows
@@ -12,10 +15,10 @@ Using unity allows the project to be exported to numerous devices, however some 
 - [x] PTC Login
 - [ ] Google Login
 - [ ] Registration
-- [ ] Map (Using Google Maps for images)
+- [x] Map (Using Google Maps for images)
 - [ ] Nearby Pokemon
-- [ ] WASD Support
-- [ ] Map (with teleport and viewing past local area, can be disabled if you think it's cheating)
+- [x] WASD Support
+- [x] Map (with teleport and viewing past local area, can be disabled if you think it's cheating)
 - [ ] All Pokemons
 - [ ] Pokemon Catching 
 - [ ] Pokestops
